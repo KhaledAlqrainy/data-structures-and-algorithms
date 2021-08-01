@@ -10,9 +10,10 @@ Write a function named raisedToTheThird that takes in an array of numbers and re
 
 const raisedToTheThird = (arr) => {
   let powerArr = [];
-  arr.forEach ((num) => {
+  arr.forEach (num => {
     powerArr.push(Math.pow(num, 3));
   })
+  return powerArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -23,7 +24,7 @@ Write a function named addOne that, given an array of numbers, uses map to retur
 
 const addOne = (arr) => {
 
-  let increment = arr.map((num) => num++) 
+  let increment = arr.map((num) => num +1) 
      return increment;
   
   
@@ -54,13 +55,12 @@ For example, twoToThe([1,2,3]) returns [2,4,8] because 2 ^ 1 = 2, 2 ^ 2 = 4, and
 ------------------------------------------------------------------------------------------------ */
 
 const forLoopTwoToThe = (arr) => {
-  let newarr = [];
-  for (i=0;i<newarr.length;i++){
-    newarr.push(Math.pow(arr[i],2));
-  }
-  return newarr;
+  let newarr1=[];
+  for (let i = 0; i < arr.length; i++) {
+    newarr1.push(Math.pow(2,arr[i]));
+}
+return newarr1;
 };
-
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
 
@@ -68,11 +68,11 @@ Write a function named forEachTwoToThe that produces the same output as your for
 ------------------------------------------------------------------------------------------------ */
 
 const forEachTwoToThe = (arr) => {
-  let newarr =[];
-  arr.forEach((num)=>{
-    newarr.push(Math.pow(num,2));
+  let newarr1 =[];
+  arr.forEach(num => {
+    newarr1.push(Math.pow(2,num));
   })
-  return newarr;
+  return newarr1;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -82,10 +82,10 @@ Write a function named mapTwoToThe that produces the same output as your forLoop
 ------------------------------------------------------------------------------------------------ */
 
 const mapTwoToThe = (arr) => {
-  let newrarr = arr.map((num) => {
-    newrarr.push(Math.pow(num,2))
+  let newrarr1 = arr.map((num) => {
+    return Math.pow(2,num)
   })
-  return newrarr;
+  return newrarr1;
 };
 
 
