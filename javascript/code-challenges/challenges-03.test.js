@@ -7,12 +7,16 @@ Write a function called addTwo that takes in an array and adds two to every valu
 ------------------------------------------------------------------------------------------------ */
 
 const addTwo = (arr) => {
+
   let newarr1=[];
   for (let i = 0; i < arr.length; i++)
    {
   newarr1.push(arr[i]+2);  
   }
   return newarr1;
+
+  // Solution code here...
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -31,6 +35,7 @@ const typeNum = (arr) => {
     }
   });
   return nums;
+  // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -48,6 +53,7 @@ const containsAnd = (arr) => {
     }
   });
   return strng;
+  // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -66,6 +72,7 @@ const oddValues = (arr) => {
     }
   });
   return newarr1;
+  // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -83,6 +90,7 @@ const notInFirstArray = (forbiddenValues, arr) => {
     }
   });
   return notInc;
+  // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
