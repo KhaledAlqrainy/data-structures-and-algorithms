@@ -7,7 +7,16 @@ Write a function called addTwo that takes in an array and adds two to every valu
 ------------------------------------------------------------------------------------------------ */
 
 const addTwo = (arr) => {
+
+  let newarr1=[];
+  for (let i = 0; i < arr.length; i++)
+   {
+  newarr1.push(arr[i]+2);  
+  }
+  return newarr1;
+
   // Solution code here...
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -19,6 +28,13 @@ For example, typeNum([1, 'bob' ,3]) returns [1,3].
 ------------------------------------------------------------------------------------------------ */
 
 const typeNum = (arr) => {
+  let nums = arr.filter((i) =>
+   {
+    if (typeof i === "number") {
+      return true;
+    }
+  });
+  return nums;
   // Solution code here...
 };
 
@@ -31,6 +47,12 @@ For example, containsAnd(['panda', 'ran', 'and']) returns ['panda', 'and'].
 ------------------------------------------------------------------------------------------------ */
 
 const containsAnd = (arr) => {
+  let strng = arr.filter((i) => {
+    if (i.includes("and")) {
+      return true;
+    }
+  });
+  return strng;
   // Solution code here...
 };
 
@@ -43,6 +65,13 @@ For example, oddValues([1,2,3]) returns [1,3].
 ------------------------------------------------------------------------------------------------ */
 
 const oddValues = (arr) => {
+  let newarr1 = arr.filter((i) =>
+   {
+    if (i%2===1) {
+      return true;
+    }
+  });
+  return newarr1;
   // Solution code here...
 };
 
@@ -55,6 +84,12 @@ For example, notInFirstArray([1,2,3], [1,2,3,4]) returns [4].
 ------------------------------------------------------------------------------------------------ */
 
 const notInFirstArray = (forbiddenValues, arr) => {
+  let notInc = arr.filter((i) => {
+    if (!forbiddenValues.includes(i)) {
+      return true;
+    }
+  });
+  return notInc;
   // Solution code here...
 };
 
