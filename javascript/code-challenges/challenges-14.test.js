@@ -182,7 +182,82 @@ Here is a sample board:
 ------------------------------------------------------------------------------------------------ */
 
 const detectTicTacToeWin = (board) => {
-  // Solution code here...
+
+  const rows = Object.values(rowCreator(board));
+  const cols = Object.values(colCreator(board));
+  const diags = Object.values(diagCreator(board));
+
+  const newarr1 = [...rows, ...cols, ...diags];
+
+  let result = 0;
+  for (let i = 0; i < newarr1.length; i++) {
+    if (
+      newarr1[i][0] == newarr1[i][1] &&
+      newarr1[i][0] == newarr1[i][2] &&
+      newarr1[i][0]
+    ) 
+    {
+      result = true;
+      break;
+    }
+     else {
+      result = false;
+    }
+  }
+
+  return result;
+};
+
+function rowCreator(board) {
+
+  let newRow = {
+    0: [],
+    1: [],
+    2: [],
+  };
+
+  board.forEach((item, idx) => 
+  {
+    newRow[idx] = item;
+  });
+
+  return newRow;
+}
+
+function colCreator(board)
+ {
+  let newCols = {
+    0: [],
+    1: [],
+    2: [],
+  };
+
+  board.forEach((n) => 
+  {
+    n.forEach((m, i) => {
+      newCols[i].push(m);
+    });
+  });
+
+  return newCols;
+}
+
+function diagCreator(board)
+ {
+  let newDiags = {
+    0: [],
+    1: [],
+  };
+
+  board.reduce((acc, n, idx) => {
+    newDiags[0].push(n[idx]);
+    newDiags[1].push(n[acc]);
+    acc--;
+    return acc;
+  }, 2);
+
+  return newDiags;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
