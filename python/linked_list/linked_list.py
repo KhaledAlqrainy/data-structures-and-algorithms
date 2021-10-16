@@ -48,37 +48,46 @@ class LinkedList:
     returns: None
     """
   
-    def insert (self, data):
-        new_node = Node (data, self.head)
-        self.head = new_node
-        self.size += 1
+    def insert(self, data):
+        """
+        insert a node in the list
 
-    def includes (self, data):
-        this_node = self.head
-        while this_node:
-            if this_node.get_data() == data:
-                return True
-            else:
-                this_node = this_node.get_next()
-        return False
+        """
+        new_node = Node (data, self.head)
+        new_node.next_=self.head
+        self.head=new_node
+
+    def includes(self, data):
+        """
+        check if the value exist in the list
+        return a boolean: True if exist, False if not
+
+        """
+        if self.head is None:
+            return False
+        else:
+            item=self.head
+            while(item):
+                if(item.value==data):
+                    return True
+                else: 
+                    item=item.next_
+            
+            return False
 
 
     def __str__(self):
-        if self.head:
-            saved_data = "{"f"{self.head.data}""} "
-            this_node = self.head
-            while this_node:
-                this_node = this_node.next_node
-                if  this_node:
-                    saved_data += "-> ""{"f"{ this_node.data}""} "
-                else:
-                    saved_data += "-> NULL"
-        else:
-            return "Your List still empty"
-        return saved_data
 
+        """
+        return a string of the list
 
-myList = LinkedList()
-print(myList.includes(5))
-print(myList.includes(3))
-print(myList.__str__())
+        """
+
+        item=self.head
+        space=''
+        if item !=None:
+                while(item):
+                    space+=' {'+str(item.value)+'} ->'
+                    item=item.next_
+                return space+'NULL'
+
