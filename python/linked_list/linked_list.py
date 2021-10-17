@@ -1,3 +1,4 @@
+
 class Node:
   """
   A class representing a Node
@@ -48,16 +49,16 @@ class LinkedList:
     returns: None
     """
   
-    def insert(self, data):
+  def insert(self, data=None):
         """
         insert a node in the list
 
         """
-        new_node = Node (data, self.head)
+        new_node = Node(data)
         new_node.next_=self.head
         self.head=new_node
 
-    def includes(self, data):
+  def includes(self, data):
         """
         check if the value exist in the list
         return a boolean: True if exist, False if not
@@ -68,15 +69,14 @@ class LinkedList:
         else:
             item=self.head
             while(item):
-                if(item.value==data):
+                if(item.data==data):
                     return True
-                else: 
-                    item=item.next_
-            
-            return False
 
+                item=item.next_
 
-    def __str__(self):
+            return False 
+                    
+  def to_string(self):
 
         """
         return a string of the list
@@ -87,7 +87,64 @@ class LinkedList:
         space=''
         if item !=None:
                 while(item):
-                    space+=' {'+str(item.value)+'} ->'
+                    space+=' {'+str(item.data)+'} ->'
                     item=item.next_
                 return space+'NULL'
+
+  def append(self,data):
+
+        """
+        A function to add a node in the end of list
+        """
+        newValue=Node(data)
+        
+        if self.head is None:
+            while(end.next_):
+                end=end.next_
+            end.next_=newValue
+        else:
+            self.head=newValue
+
+  def insert_before(self,data, newValue):
+
+        """
+        A function that adds a new node with the given new value immediately before the first node that has the value specified
+        """
+
+        if self.head is None:
+            return 'Linked List is Empty'
+            
+        newValue1=Node(newValue)
+        last=self.head
+
+        while(last.next_):
+            if last.next_.data==data:
+                newValue1.next_=last.next_
+                last.next_=newValue1
+                 
+
+  def insert_after(self,data, newValue):
+
+        """
+        A function that adds a new node with the given new value immediately after the first node that has the value specified
+        """
+
+        if self.head is None:
+            return 'Linked List is Empty'
+            
+        newValue1=Node(newValue)
+        last=self.head
+
+        while(last.next_):
+            
+            if last.data==data:
+                newValue1.next_=last.next_
+                last.next_=newValue1
+            
+                
+             
+
+
+
+    
 
