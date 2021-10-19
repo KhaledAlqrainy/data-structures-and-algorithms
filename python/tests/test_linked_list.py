@@ -62,58 +62,5 @@ def test_to_string():
     actual= ll.to_string()
     assert actual == expected
 
-def test_append_one_node():
 
-    expected ="{ 0 } -> { 2} -> NULL"
-    ll = LinkedList()
-    ll.insert(0)
-    ll.append(2)
-    actual= ll.to_string()
-    assert actual == expected
 
-# def test_append_multiple_nodes():
-
-#   expected ="{ 0 } -> { 2 } -> { 4 } -> NULL"
-#   ll = LinkedList()
-#   ll.insert(0)
-#   ll.append(2)
-#   ll.append(4)
-#   actual= ll.to_string()
-#   assert actual == expected
-
-# def test_insert_before_middle_node():
-#   expected ="{ 0 } -> { 2 } -> { 4 } -> NULL"
-#   ll = LinkedList()
-#   ll.insert(4)
-#   ll.insert(0)
-#   ll.insert_before(4,2)
-#   actual= ll.to_string()
-#   assert actual == expected
-
-# def test_insert_before_first_node():
-#   expected ="{ 0 } -> { 2 } -> NULL"
-#   ll = LinkedList()
-#   ll.insert(2)
-#   ll.insert_before(2,0)
-#   actual= ll.to_string()
-#   assert actual == expected
-
-# def test_insert_after_middle():
-    
-#     expected = "{ 0 } -> { 2 } -> { 4 } -> { 6 } ->NULL"
-#     ll = LinkedList()
-#     ll.insert(6)
-#     ll.insert(2)
-#     ll.insert(0)
-#     ll.insert_after(2,4)
-#     actual = ll.to_string()
-#     assert actual == expected
-
-# def test_insert_after_last():
-    
-#     expected = "{ 0 } -> { 2 } -> NULL"
-#     ll = LinkedList()
-#     ll.insert(0)
-#     ll.insert_after(0,2)
-#     actual = ll.to_string()
-#     assert actual == expected
