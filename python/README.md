@@ -13,6 +13,7 @@
 |  05   |  https://github.com/KhaledAlqrainy/data-structures-and-algorithms/blob/linked-list/python/linked_list/README.md |
 |  06   |  https://github.com/KhaledAlqrainy/data-structures-and-algorithms/blob/linked-list-insertions/python/linked_list/README.md |
 |  07   |  https://github.com/KhaledAlqrainy/data-structures-and-algorithms/blob/linked-list-kth/python/linked_list/README.md |
+|  08   |  https://github.com/KhaledAlqrainy/data-structures-and-algorithms/blob/linked-list-zip/python/linked_list/README.md |
 
 ### Folder and Challenge Setup
 

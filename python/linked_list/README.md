@@ -7,4 +7,4 @@ time -> O(n)
 space -> O(1)
 
 # PR link :
-https://github.com/KhaledAlqrainy/data-structures-and-algorithms/pull/21
+https://github.com/KhaledAlqrainy/data-structures-and-algorithms/pull/22
