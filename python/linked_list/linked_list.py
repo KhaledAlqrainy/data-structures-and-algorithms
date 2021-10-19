@@ -49,13 +49,13 @@ class LinkedList:
     returns: None
     """
   
-  def insert(self, data=None):
+  def insert(self, data):
         """
         insert a node in the list
 
         """
-        new_node = Node(data)
-        new_node.next_=self.head
+        new_node = Node(data,self.head)
+        # new_node.next_=self.head
         self.head=new_node
 
   def includes(self, data):
@@ -87,7 +87,7 @@ class LinkedList:
         space=''
         if item !=None:
                 while(item):
-                    space+=' {'+str(item.data)+'} ->'
+                    space+='{'+str(item.data)+'}->'
                     item=item.next_
                 return space+'NULL'
 
@@ -99,11 +99,14 @@ class LinkedList:
         newValue=Node(data)
         
         if self.head is None:
-            while(end.next_):
-                end=end.next_
-            end.next_=newValue
+            self.head = newValue
         else:
-            self.head=newValue
+
+            last= self.head
+
+            while (last.next_):
+                last = last.next_
+            last.next_ = newValue
 
   def insert_before(self,data, newValue):
 
@@ -121,25 +124,31 @@ class LinkedList:
             if last.next_.data==data:
                 newValue1.next_=last.next_
                 last.next_=newValue1
+                return
                  
 
-  def insert_after(self,data, newValue):
+  def insert_after(self,value, newValue):
 
         """
         A function that adds a new node with the given new value immediately after the first node that has the value specified
         """
-
-        if self.head is None:
-            return 'Linked List is Empty'
-            
-        newValue1=Node(newValue)
+        
         last=self.head
 
-        while(last.next_):
+        while last:
+            if last.data == value:
+                newValue = last.next_
+                last.next_ = Node(newValue)
+                last.next_.next_ = newValue
+                break
+            last = last.next_
+            return
             
-            if last.data==data:
-                newValue1.next_=last.next_
-                last.next_=newValue1
+
+        
+        
+    
+
             
                 
              

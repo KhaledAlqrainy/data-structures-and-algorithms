@@ -14,12 +14,22 @@ includes : Indicates whether that value exists as a Node’s value somewhere wit
 to string : return a string representing all the values in the Linked List, formatted as:
 "{ a } -> { b } -> { c } -> NULL"
 
-# Table of content
 
-| Code Challenge    |    Pull Request link    |
-| ---- | ----------------------------------- |
-|  01   |  https://github.com/KhaledAlqrainy/data-structures-and-algorithms/pull/16 |
-|  02   |  https://github.com/KhaledAlqrainy/data-structures-and-algorithms/pull/19 |
-|  03   |  https://github.com/KhaledAlqrainy/data-structures-and-algorithms/pull/17 |
-|  04   |  https://docs.google.com/spreadsheets/d/10VPE3pKXz0ENLPS1zSzjkglykgT8u0HcFkYE0z08lBI/edit?usp=sharing |
-|  05   |  https://github.com/KhaledAlqrainy/data-structures-and-algorithms/pull/18 |
+# Linked list insertions
+Upgrading my linked list, add methods to Linked List class which will:
+
+**append** (adding node with the given value to the end of the list)
+
+**insert before** (adds a new node with the given new value immediately before the first node that has the value specified)
+
+**insert after** (adds a new node with the given new value immediately after the first node that has the value specified)
+
+
+## Approach & Efficiency
+ Append : time -> O(1)
+ Insert : time -> O(n)
+InsertBefore: time -> O(n)
+InsertAfter: time -> O(n)
+
+
+
