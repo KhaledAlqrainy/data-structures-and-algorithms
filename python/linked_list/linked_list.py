@@ -85,3 +85,80 @@ class LinkedList:
                     space+='{'+str(item.data)+'}->'
                     item=item.next_
                 return space+'NULL'
+
+
+  def append(self,data):
+
+        """
+        A function to add a node in the end of list
+        """
+        newValue=Node(data)
+        
+        if self.head is None:
+            self.head = newValue
+        else:
+
+            last= self.head
+
+            while (last.next_):
+                last = last.next_
+            last.next_ = newValue
+
+  def insert_before(self,data, newValue):
+
+        """
+        A function that adds a new node with the given new value immediately before the first node that has the value specified
+        """
+
+        if self.head is None:
+            return 'Linked List is Empty'
+            
+        newValue1=Node(newValue)
+        last=self.head
+
+        while(last.next_):
+            if last.next_.data==data:
+                newValue1.next_=last.next_
+                last.next_=newValue1
+                return
+                 
+
+  def insert_after(self,value, newValue):
+
+        """
+        A function that adds a new node with the given new value immediately after the first node that has the value specified
+        """
+        
+        last=self.head
+
+        while last:
+            if last.data == value:
+                newValue = last.next_
+                last.next_ = Node(newValue)
+                last.next_.next_ = newValue
+                break
+            last = last.next_
+            return
+            
+  def kth_from_end(self,k):
+
+        item=self.head
+        round = 0
+
+        
+        while (item):
+            if (round == k):
+                return item.data
+            round += 1
+            item= item.next_
+
+        if k == round :
+                return 'k and the list have the same length'
+
+        elif k >round :
+            return 'k is larger than the list range'
+            
+        elif k<0 :
+            return 'k is a negative number'
+        
+        
