@@ -1,7 +1,7 @@
 # Singly Linked List
 created a linked list.
 ## Challenge
-write a linked list having head value with an O(1) and includes methods (insert, inclueds and to string)
+write a linked list having head value with an O(1) and includes methods (insert, includes and to string)
 ## Approach & Efficiency
 O(1) time performance.
 

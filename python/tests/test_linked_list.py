@@ -62,6 +62,7 @@ def test_to_string():
     actual= ll.to_string()
     assert actual == expected
 
+
 def test_append_one_node():
 
     expected ="{0}->{2}->NULL"
@@ -119,3 +120,4 @@ def test_insert_after_last():
     ll.append(4)
     actual = ll.to_string()
     assert actual == expected
+

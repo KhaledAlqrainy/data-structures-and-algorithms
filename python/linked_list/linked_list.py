@@ -18,9 +18,6 @@ class Node:
     self.data = data
     self.next_ = next_
 
-    
-
-    
 
 class LinkedList:
   """
@@ -55,7 +52,6 @@ class LinkedList:
 
         """
         new_node = Node(data,self.head)
-        # new_node.next_=self.head
         self.head=new_node
 
   def includes(self, data):
@@ -89,6 +85,7 @@ class LinkedList:
                 while(item):
                     space+='{'+str(item.data)+'}->'
                     item=item.next_
+
                 return space+'NULL'
 
   def append(self,data):
@@ -156,4 +153,5 @@ class LinkedList:
 
 
     
+
 
