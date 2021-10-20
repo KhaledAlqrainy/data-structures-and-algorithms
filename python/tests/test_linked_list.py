@@ -62,8 +62,9 @@ def test_to_string():
     actual= ll.to_string()
     assert actual == expected
 
-
+########## 06 ##########
 def test_append_one_node():
+
 
     expected ="{0}->{2}->NULL"
     ll = LinkedList()
@@ -121,6 +122,8 @@ def test_insert_after_last():
     actual = ll.to_string()
     assert actual == expected
 
+############# 07 ############
+
 def test_k_larger():
 
     expected = 'k is larger than the list range'
@@ -169,3 +172,18 @@ def test_k_middle():
     ll.insert(4)
     actual = ll.kth_from_end(2)
     assert actual == expected
+
+########## 08 ###########
+
+
+def test_list_empty():
+
+    excepted="{ 5 } -> { 3 } -> { 2 } -> NULL"
+    ll_1=LinkedList()
+    ll_2 =LinkedList()
+    ll_1.insert(5)
+    ll_1.insert(3)
+    ll_1.insert(2)
+    actual = ll_1.zipLists(ll_1)
+    
+    assert excepted==actual

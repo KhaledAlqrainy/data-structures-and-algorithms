@@ -162,6 +162,33 @@ class LinkedList:
             
         elif k<0 :
             return 'k is a negative number'
+
+  def zipLists(arg1, arg2):
+    
+    value1= arg1.head
+    value2= arg2.head
+    last = value2.next_
+
+    while value1 and value2 :
+
+        value2.next_ = value1.next_
+        value1.next_ = value2 
+        value1 = value2.next_
+        value2 = value2.next_
+        last = last.next_
+
+    if not value1.next_ :
+        value1.next_ = value2
+        return arg1.head
+
+    if not value2.next_:
+        value2.next_ = value1.next_
+        value1.next_ = value2
+        return arg1.head
+        
+
+
+
         
         
 
