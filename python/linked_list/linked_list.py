@@ -85,8 +85,9 @@ class LinkedList:
                 while(item):
                     space+='{'+str(item.data)+'}->'
                     item=item.next_
-
                 return space+'NULL'
+
+
 
   def append(self,data):
 
@@ -141,6 +142,29 @@ class LinkedList:
             last = last.next_
             return
             
+  def kth_from_end(self,k):
+
+        item=self.head
+        round = 0
+
+        
+        while (item):
+            if (round == k):
+                return item.data
+            round += 1
+            item= item.next_
+
+        if k == round :
+                return 'k and the list have the same length'
+
+        elif k >round :
+            return 'k is larger than the list range'
+            
+        elif k<0 :
+            return 'k is a negative number'
+        
+        
+
 
         
         
