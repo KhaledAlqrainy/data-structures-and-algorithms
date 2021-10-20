@@ -1,5 +1,4 @@
 
-
 class Node:
   """
   A class representing a Node
@@ -87,6 +86,7 @@ class LinkedList:
                     space+='{'+str(item.data)+'}->'
                     item=item.next_
                 return space+'NULL'
+
 
 
   def append(self,data):
@@ -191,3 +191,18 @@ class LinkedList:
 
         
         
+
+
+        
+        
+    
+
+            
+                
+             
+
+
+
+    
+
+

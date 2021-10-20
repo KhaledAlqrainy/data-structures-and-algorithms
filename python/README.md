@@ -2,7 +2,8 @@
 
 ## Language: `Python`
 
-## Table of Content
+# Table of content
+
 
 | Code Challenge    |    Pull Request link    |
 | ---- | ----------------------------------- |
@@ -10,10 +11,11 @@
 |  02   |  https://github.com/KhaledAlqrainy/data-structures-and-algorithms/pull/19 |
 |  03   |  https://github.com/KhaledAlqrainy/data-structures-and-algorithms/pull/17 |
 |  04   |  https://docs.google.com/spreadsheets/d/10VPE3pKXz0ENLPS1zSzjkglykgT8u0HcFkYE0z08lBI/edit?usp=sharing |
-|  05   |  https://github.com/KhaledAlqrainy/data-structures-and-algorithms/blob/linked-list/python/linked_list/README.md |
-|  06   |  https://github.com/KhaledAlqrainy/data-structures-and-algorithms/blob/linked-list-insertions/python/linked_list/README.md |
-|  07   |  https://github.com/KhaledAlqrainy/data-structures-and-algorithms/blob/linked-list-kth/python/linked_list/README.md |
-|  08   |  https://github.com/KhaledAlqrainy/data-structures-and-algorithms/blob/linked-list-zip/python/linked_list/README.md |
+|  05   |  https://github.com/KhaledAlqrainy/data-structures-and-algorithms/pull/18 |
+|  06   |  https://github.com/KhaledAlqrainy/data-structures-and-algorithms/blob/linked-list/python/linked_list/README.md |
+|  07   |  https://github.com/KhaledAlqrainy/data-structures-and-algorithms/blob/linked-list-insertions/python/linked_list/README.md  |
+|  08   |  https://github.com/KhaledAlqrainy/data-structures-and-algorithms/blob/linked-list-kth/python/linked_list/README.md |
+|  09   |  https://github.com/KhaledAlqrainy/data-structures-and-algorithms/blob/linked-list-zip/python/linked_list/README.md |
 
 ### Folder and Challenge Setup
 
