@@ -1,3 +1,4 @@
+
 class Node:
   """
   A class representing a Node
@@ -87,6 +88,7 @@ class LinkedList:
                 return space+'NULL'
 
 
+
   def append(self,data):
 
         """
@@ -162,3 +164,18 @@ class LinkedList:
             return 'k is a negative number'
         
         
+
+
+        
+        
+    
+
+            
+                
+             
+
+
+
+    
+
+
