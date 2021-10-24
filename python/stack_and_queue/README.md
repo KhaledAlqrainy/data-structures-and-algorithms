@@ -3,10 +3,15 @@
 * A stack is data structure, you can push or pop from it. Push => add after the last element, Pop => deletes the last element, and it has more than these functionality. Stack is like LIFO
 
 * A queue is a data structure, you can enqueue or dequeue from it. enqueue => add in the first element, dequeue => deletes the first element. Queue is like FIFO
+## Whiteboard Process
+
+![Image](./stack_queue_pseudo.PNG)
 
 ## Challenge
 
-create two classes (Stack and Queue) having multiple methods will push, pop, peek and check if its empty or not.
+Create a new class called pseudo queue.
+Do not use an existing Queue.
+Instead, this PseudoQueue class will implement our standard queue interface (the two methods listed below),
 
 ## Approach & Efficiency
 
@@ -42,6 +47,7 @@ Dequeue -> (1)
 
 * Calling dequeue or peek on empty queue raises exception.
 
-# PR link :
+* Inserts value into the PseudoQueue, using a first-in, first-out approach.
 
-https://github.com/KhaledAlqrainy/data-structures-and-algorithms/pull/23
+* Extracts a value from the PseudoQueue, using a first-in, first-out approach.h
+

@@ -1,4 +1,5 @@
-from stack_and_queue.stack_and_queue import Node,Stack,Queue
+from abc import abstractclassmethod
+from stack_and_queue.stack_and_queue import Node,Stack,Queue, PseudoQueue
 import pytest
 
 
@@ -87,3 +88,22 @@ def test_peek_empty_queue():
     empty_queue = Queue()
     assert empty_queue.__str__() == ''
     assert empty_queue.peek() == 'Queue is Empty'
+
+######### Pseudo Queue ######
+
+def test_insert_value():
+    queue = PseudoQueue()
+    queue.enqueue(1)
+    queue.enqueue(2)
+    queue.enqueue(3)
+    queue.enqueue(4)
+    queue.enqueue()
+    actual = queue.__str__()
+    expected = '4->3->2->1'
+    assert actual == expected
+
+def test_No_value():
+    expected = 'value is None'
+    queue = PseudoQueue()
+    actual=queue.enqueue()
+    assert actual == expected

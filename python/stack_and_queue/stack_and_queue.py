@@ -103,5 +103,57 @@ class Queue:
             item = item.next
         return "\n".join(list)
 
+
+########## Pseudo Queue ##########
+
+class PseudoQueue:
+  def __init__(self):
+        self.pushStack = Stack()
+        self.popStack = Stack()
+
+  def enqueue(self, item=None):
+    if item == None:
+      return 'value is None'
+    self.pushStack.push(item)
+
+  def dequeue(self):
+    if self.pushStack.top == None:
+      return 'Queue is Empty'
+    while self.pushStack.top:
+      self.popStack.push(self.pushStack.pop())
+    newdata = self.popStack.pop()
+
+    while self.popStack.top:
+      self.pushStack.push(self.popStack.pop())
+    return newdata
+
+  def __str__(self):
+
+    new = self.pushStack.top
+    s=''
+    while new:
+      
+        if not new.next:
+                s=s+f'{new.data}'
+                new = new.next
+        else:
+                s=s+f'{new.data}->'
+                new = new.next
+            
+    print(s)
+
+    return s
+        
+
+if __name__ == '__main__':
+    queue = PseudoQueue()
+    queue.enqueue(1)
+    queue.enqueue(2)
+    queue.enqueue(3)
+    queue.enqueue(4)
+    queue.dequeue()
+    queue.__str__()
+
+
     
 
