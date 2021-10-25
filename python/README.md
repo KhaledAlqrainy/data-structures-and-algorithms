@@ -17,6 +17,7 @@
 |  09   |  https://github.com/KhaledAlqrainy/data-structures-and-algorithms/blob/linked-list-zip/python/linked_list/README.md |
 |  10   |  https://github.com/KhaledAlqrainy/data-structures-and-algorithms/blob/stack-and-queue/python/stack_and_queue/README.md |
 |  11   |  https://github.com/KhaledAlqrainy/data-structures-and-algorithms/tree/stack-queue-pseudo/python/stack_and_queue |
+|  12   |  https://github.com/KhaledAlqrainy/data-structures-and-algorithms/blob/stack-queue-animal-shelter/python/stack_and_queue/README.md |
 
 
 ### Folder and Challenge Setup
