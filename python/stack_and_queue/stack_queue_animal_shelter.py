@@ -1,4 +1,8 @@
 class Dog:
+    """
+    Class present a dog, type = dog
+    
+    """
 
     def __init__(self,data):
 
@@ -7,6 +11,11 @@ class Dog:
         self.next = None
 
 class Cat:
+
+    """
+    Class present a cat, type = cat
+    
+    """
 
     def __init__(self,data):
 
@@ -17,11 +26,21 @@ class Cat:
 
 class Animalshelter():
 
+    """
+    Class present methods for enqueue and dequeue
+    """
+
     def __init__(self):
         self.first = None
         self.second = None
     
     def enqueue(self,animal):
+
+        """
+        Add or push a cat or dog object to the queue.
+        Argument = animal(dog or cat)
+        
+        """
 
         node =  animal
         if self.second:
@@ -33,6 +52,11 @@ class Animalshelter():
             self.second = node
             
     def dequeue(self,pref):
+
+        """
+        Get and remove the animal object only if it is a cat or a dog.
+        Argument = pref
+        """
         
         if self.first:
             temp=self.first
