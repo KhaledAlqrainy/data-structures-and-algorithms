@@ -112,6 +112,25 @@ class BinaryTree:
     walk(self.root)
     return list_of_items
 
+  def max(self):
+    self.data =0 
+
+    def walk(current):
+
+      if current:
+
+        if current.data > self.data:
+          self.data = current.data
+        
+        if current.right:
+          walk(current.right)
+        
+        if current.left:
+          walk(current.left)
+
+    walk(self.root)
+    return self.data
+
 
   
 
