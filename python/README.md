@@ -20,6 +20,7 @@
 |  12   |  https://github.com/KhaledAlqrainy/data-structures-and-algorithms/blob/stack-queue-animal-shelter/python/stack_and_queue/README.md |
 |  13   |  https://github.com/KhaledAlqrainy/data-structures-and-algorithms/blob/stack-queue-brackets/python/code_challenges/README.md |
 |  15   |  https://github.com/KhaledAlqrainy/data-structures-and-algorithms/blob/trees/python/code_challenges/README.md |
+|  16   |  https://github.com/KhaledAlqrainy/data-structures-and-algorithms/blob/tree-max/python/code_challenges/README.md |
 
 
 ### Folder and Challenge Setup
