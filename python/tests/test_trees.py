@@ -1,4 +1,4 @@
-from code_challenges.trees import *
+from Data_Structure.trees import *
 import pytest
 
 def test_bfs():
