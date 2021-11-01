@@ -41,3 +41,22 @@ Space complexity => O(1)
 ## Whiteboard
 
 ![Image](./tree-max.PNG)
+
+
+# Breadth First
+
+* write  a function that takes a tree and returns its values as a list sorted according to breadth value.
+
+## Challenge 
+
+* trying to deal with the tree as node and right and left.
+
+## Approach & Efficiency:
+
+Time complexity => O(n)
+Space complexity => O(1)
+
+
+## Whiteboard
+
+![Image](./tree-breadth-first.PNG)

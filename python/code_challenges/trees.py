@@ -112,7 +112,12 @@ class BinaryTree:
     walk(self.root)
     return list_of_items
 
+
   def max(self):
+    """
+    A function that takes a values in tree and return the maximum value in that tree.
+    
+    """
     self.data =0 
 
     def walk(current):
@@ -130,6 +135,35 @@ class BinaryTree:
 
     walk(self.root)
     return self.data
+
+  def breadth_first(self, tree):
+
+    """
+    A function that Return list of all values in the tree, in the order they were encountered
+
+    """
+
+    if tree.root is None:
+      return 'Tree is Empty'
+
+    temp = []
+    results = []
+    
+    if self.root:
+        temp.append(self.root)
+        
+        while temp:
+          node = temp.pop(0)
+          results.append(node.data)
+          
+          if node.left:
+              temp.append(node.left)
+          if node.right:
+              temp.append(node.right)
+        return results
+
+  
+        
 
 
   
