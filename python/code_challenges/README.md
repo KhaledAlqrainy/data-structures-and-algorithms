@@ -1,62 +1,28 @@
-# Trees
+# Tree Fizz Buzz 
 
-* Define a method for each of the depth first traversals called pre_order, in_order, and post_order which returns an array of the values, ordered appropriately.
-
-## Challenge
-
-Create a Node class that has properties for the value stored in the node, left node, and the right node. Also create a BinaryTree class.
-
-## Approach & Efficiency
-
-**Big O :**
-
-Time -> O(n)
-Space -> O(1)
-
-**Binary Search Trees**
-
- A Binary Search Tree is a type of tree that does have some structure attached to it. In a binary search tree, nodes are organized in a manner where all values that are smaller than the root are placed to the left, and all values that are larger than the root are placed to the right.
-
-## API
-
-Pre-order: root » left » right
-
-In-order: left » root » right
-
-Post-order: left » right » root
-
-# Max Value in tree:
-
-* Create a method that find the maximum value stored in the tree. You can assume that the values stored in the Binary Tree will be numeric.
-
-## Challenge:
-
-* Find the maximum number in the tree.
-
-## Approach & Efficiency:
-
-Time complexity => O(n)
-Space complexity => O(1)
-
-## Whiteboard
-
-![Image](./tree-max.PNG)
-
-
-# Breadth First
-
-* write  a function that takes a tree and returns its values as a list sorted according to breadth value.
+* Create function called fizz_buzz which takes a tree_data as an argument.
 
 ## Challenge 
 
-* trying to deal with the tree as node and right and left.
+* Create a new tree with the same previous code and modify ..
+ 
+  * If the value is divisible by 3, replace the value with “Fizz”
+  
+  * If the value is divisible by 5, replace the value with “Buzz”
+  
+  * If the value is divisible by 3 and 5, replace the value with “FizzBuzz”
+  
+  * If the value is not divisible by 3 or 5, simply turn the number into a String.
+
 
 ## Approach & Efficiency:
 
-Time complexity => O(n)
-Space complexity => O(1)
+Big O :
 
+Time -> O(n)
+
+Space -> O(n)
 
 ## Whiteboard
 
-![Image](./tree-breadth-first.PNG)
+![Image](./tree-fizz-buzz.PNG)
