@@ -21,6 +21,7 @@
 |  13   |  https://github.com/KhaledAlqrainy/data-structures-and-algorithms/blob/stack-queue-brackets/python/code_challenges/README.md |
 |  15   |  https://github.com/KhaledAlqrainy/data-structures-and-algorithms/blob/trees/python/code_challenges/README.md |
 |  16   |  https://github.com/KhaledAlqrainy/data-structures-and-algorithms/blob/tree-max/python/code_challenges/README.md |
+|  17   |  https://github.com/KhaledAlqrainy/data-structures-and-algorithms/blob/insertion-sort/python/code_challenges/Insertion_sort/README.md |
 
 
 ### Folder and Challenge Setup
