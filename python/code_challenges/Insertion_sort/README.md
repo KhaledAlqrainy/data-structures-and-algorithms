@@ -9,7 +9,7 @@
 
 ## Whiteboard
 
-![Image](./insertion-sort.md)
+![Image](./insertion-sort.PNG)
 
 ## Approach & Efficiency
 

@@ -1,5 +1,10 @@
 def insertion_sort(list):
 
+    """
+    A function that takes a list and sorted by numbers.
+    
+    """
+
     for i in range(1, len(list)):
         value = list[i]
         i -= 1
