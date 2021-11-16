@@ -135,28 +135,28 @@ def test_in_order():
 #     assert actual == expected
 
 
-def test_max():
+# def test_max():
 
-  tree = BinaryTree
+#   tree = BinaryTree
 
-  a_node = Node('5')
-  b_node = Node('9')
-  c_node = Node('15')
-  d_node = Node('6')
-  a_node.left = b_node
-  a_node.right = c_node
-  b_node.left = d_node
+#   a_node = Node('5')
+#   b_node = Node('9')
+#   c_node = Node('15')
+#   d_node = Node('6')
+#   a_node.left = b_node
+#   a_node.right = c_node
+#   b_node.left = d_node
 
-  # Add Root node to tree
-  tree.root=a_node 
+#   # Add Root node to tree
+#   tree.root=a_node 
   
-  # set expected list
-  expected = "15"
-  # set actual to return value of in_order call
-  actual = tree.max()
-  # assert actual is same as expected
-  assert actual == expected
-  print("test_in_order_ passed")
+#   # set expected list
+#   expected = "15"
+#   # set actual to return value of in_order call
+#   actual = tree.max()
+#   # assert actual is same as expected
+#   assert actual == expected
+#   print("test_in_order_ passed")
 
 
 
