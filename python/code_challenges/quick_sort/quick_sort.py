@@ -1,25 +1,22 @@
-def quick_sort(numbers):
-    """
-    A function that takes a list and sorted quickly.
+def partition(array, low, high):
+    
+    pivot = array[high]
+    i = low - 1
+    for j in range(low, high):
+        if array[j] <= pivot:
+            i = i + 1
+            array[i], array[j] = array[j], array[i]
 
-    """
+    array[i + 1], array[high] = array[high], array[i + 1]
+    return i + 1
 
-    length = len(numbers)
-    if length <= 1:
-        return numbers
-    else:
-        pivot = numbers.pop()
+def quickSort(array):
+    
+    def qS(array, low, high):
 
-    numbers_lower = []
-    numbers_greater = []
+        if low < high:
+            pi = partition(array, low, high)
+            qS(array, low, pi - 1)
+            qS(array, pi + 1, high)
 
-    for item in numbers:
-        if item > pivot:
-            numbers_greater.append(item)
-
-        else:
-            numbers_lower.append(item)
-
-    return quick_sort(numbers_lower) + [pivot] + quick_sort(numbers_greater)
-
-print(quick_sort([7,6,5,6,7,8,9,0]))
+    qS(array, 0, len(array) - 1)
