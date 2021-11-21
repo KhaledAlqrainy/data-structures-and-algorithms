@@ -1,4 +1,5 @@
-from linked_list.hashmap import HashTable
+from linked_list.hashTable.hashmap import HashTable
+# from linked_list.hashTable import __version__
 import pytest
 
 @pytest.fixture
@@ -18,7 +19,21 @@ def test_hash_word(hashtable):
 
 def test_add(hashtable):
 
-    hashtable.add('Forza','Milan')
-    assert hashtable.contains('Forza')
+    expected = "Milan"
+    hashtable.add("Forza","Milan")
+    actual = hashtable.get("Forza")
+    assert actual == expected
 
+def test_not_exist_key(hashtable):
 
+    expected = None
+    actual = hashtable.get("anything")
+    assert actual == expected
+
+def test_collision(hashtable):
+
+    expected = "ilrossoneri"
+    hashtable.add("Forza","Milan")
+    hashtable.add("Forza","ilrossoneri")
+    actual = hashtable.get("Forza")
+    assert actual == expected

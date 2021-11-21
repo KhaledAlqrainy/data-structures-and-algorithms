@@ -86,7 +86,7 @@ class HashTable:
     def contains(self,key):
 
         index = self.__hash(key)
-        if self.__buckets[index] != None:
+        if self.__buckets[index]:
 
             current = self.__buckets[index].head
             while current:
@@ -96,14 +96,14 @@ class HashTable:
         else:
             return False
 
-if __name__ == "__main__":
-    hashtable = HashTable()
-    hashtable.add("Khaled", 10)
-    hashtable.add("Forza", 'Milan')
-    hashtable.add("no", False)
-    print(hashtable.get("Forza"))
-    print(hashtable.get("no"))
-    print(hashtable.contains("Khaled"))
-    print(hashtable.__hash('united'), "hashh")
+# if __name__ == "__main__":
+#     hashtable = HashTable()
+#     hashtable.add("Khaled", 10)
+#     hashtable.add("Forza", 'Milan')
+#     hashtable.add("no", False)
+#     print(hashtable.get("Forza"))
+#     print(hashtable.get("no"))
+#     print(hashtable.contains("Khaled"))
+#     print(hashtable.__hash('united'), "hashh")
       
         
