@@ -1,5 +1,4 @@
-from linked_list.hashTable.hashmap import HashTable
-# from linked_list.hashTable import __version__
+from Data_Structure.hashTable.hashmap import HashTable
 import pytest
 
 @pytest.fixture
