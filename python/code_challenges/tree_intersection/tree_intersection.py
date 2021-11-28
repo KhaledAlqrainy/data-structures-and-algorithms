@@ -1,50 +1,75 @@
-class Node:
+from Data_Structure.hashTable.hashmap import HashTable
 
-    def __init__(self, data = None):
-        self.data = data
-        self.left = None
-        self.right = None
+class Node:
+  def __init__ (self,data,left=None,right=None):
+    self.data = data
+    self.left = left
+    self.right = right
 
 class BinaryTree:
 
-    def __init__(self, root = None):
-      
-        self.root = Node(root)
+    def __init__(self):
+        self.root = None
 
-    def contains(self, value):
+    def pre_order(self):
+        """
+        A binary tree method which returns a list of items that it contains in pre_order
+        input: None
+        output: tree items
+        sub method : walk () to make the recursion staff
+        """
+        list_of_items = []
+        def walk(node):
+            if node:
+                list_of_items.append(node.data)
+                if node.left:
+                    walk(node.left)
+                if node.right:
+                    walk(node.right)
 
-        """
-        check if there is a node in a tree has the same value as the passed value.
-        """
-        self.flag = False
-        def walk(current):
-            if current:
-                if current.data == value:
-                   self.flag = True
-                if current.left:
-                    walk(current.left)
-                if current.right:
-                    walk(current.right)
         walk(self.root)
-        return self.flag
+        return list_of_items
 
-def tree_intersection(tree_one,tree_two):
+    def add(self,value):
 
-    """
-    Check and return the same value from the trees provided.
-    """
+        if not self.root:
+            self.root= Node(value)
+        else :
+            temp = self.root
+            while temp:
+                if value < temp.data:
+                    if not temp.left:
+                        temp.left = Node(value)
+                        break
+                    temp = temp.left
+                else:
+                    if not temp.right:
+                        temp.right = Node(value)
+                        break
+                    temp = temp.right
 
-    result = []
 
-    def walk(current_one, current_two):
+def tree_intersection(first_tree , second_tree):
 
-        if current_one and current_two.root:
-            if current_two.contains(current_one.data):
-                result.append(current_one.data)
-            if current_one.left:
-                walk(current_one.left, current_two)
-            if current_one.right:
-                walk(current_one.right, current_two)
+    tree1 = first_tree.pre_order()
+    tree2 = second_tree.pre_order()
 
-    walk(tree_one.root, tree_two)
-    return result
+    if not tree1 and not tree2:
+        return "trees are empty!"
+    if not tree1 or not tree2:
+        return "Only one tree can be found"
+
+    values =[]
+    hash_table = HashTable()
+    for node in tree1:
+        hash_table.add(str(node),node)
+
+    for node in tree2:
+        if hash_table.contains(str(node)):
+            values.append(node)
+        else :
+            hash_table.add(str(node),node)
+
+    if not values:
+        return "there is no intersection between these trees"
+    return values

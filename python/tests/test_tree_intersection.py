@@ -1,31 +1,51 @@
 from code_challenges.tree_intersection.tree_intersection import *
 
-def test_tree_intersection():
-
-    tree = BinaryTree(55)
-    tree.root.left = Node(7)
-    tree.root.left.left = Node(15)
-    tree.root.left.right = Node(88)
-    tree.root.left.right.left = Node(9)
-    tree.root.left.right.right = Node(11)
-    tree.root.right = Node(14)
-    tree.root.right.left= Node(22)
-    tree.root.right.right = Node(3)
-    tree.root.right.right.left = Node(4)
-    tree.root.right.right.right = Node(77)
-
-    tree1 = BinaryTree(26)
-    tree1.root.left = Node(7)
-    tree1.root.left.left = Node(75)
-    tree1.root.left.right = Node(15)
-    tree1.root.left.right.left = Node(9)
-    tree1.root.left.right.right = Node(11)
-    tree1.root.right = Node(18)
-    tree1.root.right.left= Node(22)
-    tree1.root.right.right = Node(3)
-    tree1.root.right.right.left = Node(33)
-    tree1.root.right.right.right = Node(77)
-
-    expected = [7, 15, 9, 11, 22, 3, 77]
-    actual = tree_intersection(tree, tree1)
+def test_tree_insertion():
+    expected = [5, 3, 6]
+    tree1 = BinaryTree()
+    tree1.add(5)
+    tree1.add(3)
+    tree1.add(2)
+    tree1.add(6)
+    tree2 = BinaryTree()
+    tree2.add(5)
+    tree2.add(1)
+    tree2.add(3)
+    tree2.add(6)
+    actual =tree_intersection(tree1, tree2)
     assert actual == expected
+
+def test_no_intersection():
+    expected = "there is no intersection between these trees"
+    tree1 = BinaryTree()
+    tree1.add(5)
+    tree1.add(3)
+    tree1.add(2)
+    tree1.add(6)
+    tree2 = BinaryTree()
+    tree2.add(4)
+    tree2.add(1)
+    tree2.add(8)
+    tree2.add(9)
+    actual =tree_intersection(tree1, tree2)
+    assert actual == expected
+
+def test_empty_trees():
+        expected = "trees are empty!"
+        tree1 = BinaryTree()
+        tree2 = BinaryTree()
+        actual = tree_intersection(tree1, tree2)
+        assert actual == expected
+
+def test_second_tree_empty():
+        expected = "Only one tree can be found"
+        tree1 = BinaryTree()
+        tree1.add(5)
+        tree1.add(3)
+        tree1.add(2)
+        tree1.add(6)
+        tree2 = BinaryTree()
+        actual = tree_intersection(tree1, tree2)
+        assert actual == expected
+
+
