@@ -2,6 +2,8 @@ import re
 
 
 def repeated_word(input):
+    """
+    A function that takes a string and retrun the first word that been reapetd"""
 
     duplicates_list=[]
     input = re.sub(r"[^A-z|\s]", '', input)
