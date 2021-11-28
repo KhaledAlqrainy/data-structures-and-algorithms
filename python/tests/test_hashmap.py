@@ -1,39 +1,32 @@
-from linked_list.hashTable.hashmap import HashTable
+from Data_Structure.hashTable.hashmap import *
 # from linked_list.hashTable import __version__
 import pytest
 
 @pytest.fixture
 def hashtable():
-    
-	return HashTable()
+    test_hash = HashTable()
+    test_hash.add('yahya', '23')
+    test_hash.add('there', 95)
+    test_hash.add('there', 127)
+    return test_hash
 
 def test_hash(hashtable):
-	expected = 700
-	actual = hashtable._HashTable__hash("d")
-	assert actual == expected
+    assert hashtable.__buckets[hashtable.__hash('yahya')].head.value == '23'
+    assert hashtable.__hash('united') == 389
 
-def test_hash_word(hashtable):
-	expected = 376
-	actual =  hashtable._HashTable__hash("dd")
-	assert actual == expected
 
 def test_add(hashtable):
+    assert hashtable.add('go','play football')
+    assert hashtable.__buckets[hashtable.__hash('go')].head.value == 'play football'
 
-    expected = "Milan"
-    hashtable.add("Forza","Milan")
-    actual = hashtable.get("Forza")
-    assert actual == expected
+def test_contains(hashtable):
+    assert hashtable.contains('yahya') == True
+    assert hashtable.contains('anything') == False
 
-def test_not_exist_key(hashtable):
-
-    expected = None
-    actual = hashtable.get("anything")
-    assert actual == expected
+def test_get(hashtable):
+    assert hashtable.get('yahya') == '23'
 
 def test_collision(hashtable):
-
-    expected = "ilrossoneri"
-    hashtable.add("Forza","Milan")
-    hashtable.add("Forza","ilrossoneri")
-    actual = hashtable.get("Forza")
-    assert actual == expected
+    assert hashtable.__buckets[hashtable.__hash('there')].head.value == 127
+    assert hashtable.__buckets[hashtable.__hash('there')].head.next.value == 95
+    assert hashtable.get('there') == 127

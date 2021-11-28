@@ -14,3 +14,18 @@ Big O :
 time -> O(1)
 space -> O(1)
 
+## API 
+
+* Create a hashtable with the following methods:
+
+    - add which takes in both the key and value. Hash the key, and add the key and value pair to the table, handling collisions as needed.
+
+    - get that takes in the key and returns the value from the table.
+
+    - contains that takes in the key and returns a boolean, indicating if the key exists in the table already.
+
+    - hash that takes in an arbitrary key and returns an index in the collection.
+
+Insert key, value pair in the hashtable.
+Hash keys to determine is which index it should be added.
+
