@@ -68,6 +68,26 @@ def test_empty_graph():
     actual = graph.get_nodes()
     assert not actual
 
+def test_get_neighbors2():
+
+    graph = Graph()
+
+    banana = graph.add_node('Forza')
+
+    apple = graph.add_node('Milan')
+
+    graph.add_edge(apple, banana, 44)
+
+    neighbors = graph.get_neighbors(apple)
+
+    assert len(neighbors) == 1
+
+    neighbor_edge = neighbors[0]
+
+    assert neighbor_edge.vertex.value == 'Forza'
+
+    assert neighbor_edge.weight == 44
+
 @pytest.fixture
 def graph():
     graph = Graph()
