@@ -1,4 +1,5 @@
 from code_challenges.hashmap_left_join.hashmap_left_join import hashmap_left_join
+from Data_Structure.hashTable.hashmap import HashTable
 
 def test_left_join():
     actual = hashmap_left_join(
