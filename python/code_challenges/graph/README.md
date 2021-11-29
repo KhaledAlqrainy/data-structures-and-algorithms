@@ -1,31 +1,23 @@
-# Graph breadth first
+# Graph business trip
 
-* add node
-    - Arguments: value
-    - Returns: The added node
-    - Add a node to the graph
+* Write a function called business trip
+Arguments: graph, array of city names
 
-* add edge
-    - Arguments: 2 nodes to be connected by the edge, weight (optional)
-    - Returns: nothing
+Return: cost or null.
 
 ## Challenge:
 
-* Node can be successfully added to the graph.
-
-* An edge can be successfully added to the graph.
-
-* A collection of all nodes can be properly retrieved from the graph.
+* Determine whether the trip is possible with direct flights, and how much it would cost.
 
 ## Approach & Efficiency:
 
 Big O:
 
-time -> O(1)
-space -> O(1)
+time -> O(n)
+space -> O(n)
 
 ## Solution:
 
-![Image](./graph-breadth-first.PNG)
+![Image](./bussiness_trip.PNG)
 
 

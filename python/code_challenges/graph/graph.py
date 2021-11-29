@@ -164,4 +164,22 @@ class  Graph:
                     
         return result
 
+    def business_trip(self,list):
+        """
+        A function that takes a graph and list, return cost or null
+        """
+
+        country = self.get_neighbors(list[0])
+        cost = 0
+        flag = False
+
+        for item in list[1:]:
+            for target in country :
+                if item == target.vertex:
+                    cost += target.weight
+                    flag = True
+
+            country = self.get_neighbors(item)
+        return [flag,cost]  
+
 

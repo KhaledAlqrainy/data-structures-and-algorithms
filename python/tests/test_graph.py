@@ -88,6 +88,47 @@ def test_get_neighbors2():
 
     assert neighbor_edge.weight == 44
 
+def test_graph_business_trip():
+    graph = Graph()
+    p = graph.add_node('Pandora')
+    a = graph.add_node('Arendelle')
+    m = graph.add_node('Metroville')
+    nm = graph.add_node('New Monstropolis')
+    no = graph.add_node('Naboo')
+    nar = graph.add_node('Narnia')
+
+    graph.add_edge(p, a, 150)
+    graph.add_edge(p, m, 82)
+
+    graph.add_edge(a, p , 150)
+    graph.add_edge(a, nm ,42)
+    graph.add_edge(a, m ,99)
+
+    graph.add_edge(nm, a, 42)
+    graph.add_edge(nm, no, 73)
+    graph.add_edge(nm, m, 105)
+
+    graph.add_edge(no, nm, 73)
+    graph.add_edge(no, m, 26)
+    graph.add_edge(no, nar, 250)
+    
+    graph.add_edge(nar, m, 37)
+    graph.add_edge(nar, no, 250)
+
+    graph.add_edge(m, p, 82)
+    graph.add_edge(m, a, 99)
+    graph.add_edge(m, nm, 105)
+    graph.add_edge(m, no, 26)
+    graph.add_edge(m, nar, 37)
+    
+    
+    assert graph.business_trip([m,p])==[True,164]
+    assert graph.business_trip([a,nm,no])==[True,230]
+    assert graph.business_trip([no,p])==[False,0]
+    assert graph.business_trip([nar,a,no])==[False,0]
+
+
+
 @pytest.fixture
 def graph():
     graph = Graph()
@@ -123,3 +164,4 @@ def graph_weight():
     graph.add_edge(node_d ,node_e,8)
     graph.add_edge(node_e,node_f,4)
     return graph
+
