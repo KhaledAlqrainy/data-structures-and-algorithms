@@ -1,3 +1,4 @@
+
 class Queue:
     def __init__(self):
         self.front = None
@@ -139,6 +140,8 @@ class  Graph:
 
     def size(self):
         return len(self.adjacency_list)
+
+########### Breadth First ############
     
     def breadth_first_search(self, start_vertex):
 
@@ -164,6 +167,9 @@ class  Graph:
                     
         return result
 
+
+############## Business Trip ############
+
     def business_trip(self,list):
         """
         A function that takes a graph and list, return cost or null
@@ -181,5 +187,26 @@ class  Graph:
 
             country = self.get_neighbors(item)
         return [flag,cost]  
+
+############# Depth First #########
+
+    def graph_depth_first(self,node):
+        visited=set()
+        visited.add(node)
+        dfList=[]
+
+        def __depth(node,visited,dfList):
+            visited.add(node)
+            dfList.append(node.value)
+
+            neighbors=self.get_neighbors(node)
+            if neighbors != 'Empty':
+                for edge in neighbors:
+                    if edge.vertex not in visited :
+                        __depth(edge.vertex,visited,dfList)
+                        
+        
+        __depth(node,visited,dfList)
+        return dfList  
 
 

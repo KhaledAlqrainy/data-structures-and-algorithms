@@ -128,6 +128,41 @@ def test_graph_business_trip():
     assert graph.business_trip([nar,a,no])==[False,0]
 
 
+def test_depth_first():
+    graph = Graph()
+    a = graph.add_node('a')
+    b = graph.add_node('b')
+    c = graph.add_node('c')
+    d = graph.add_node('d')
+    e = graph.add_node('e')
+    f = graph.add_node('f')
+    g = graph.add_node('g')
+    h = graph.add_node('h')
+
+    graph.add_edge(a, b)
+    graph.add_edge(a, d)
+
+    graph.add_edge(b,a)
+    graph.add_edge(b,c)
+    graph.add_edge(b,d)
+
+    graph.add_edge(c,b)
+    graph.add_edge(c,g)
+    
+    graph.add_edge(d, a)
+    graph.add_edge(d,b)
+    graph.add_edge(d,e)
+    graph.add_edge(d,h)
+    graph.add_edge(d,f)
+    
+    graph.add_edge(f,d)
+    graph.add_edge(f,h)
+
+    graph.add_edge(h,f)
+    graph.add_edge(h,d)
+
+    graph.add_edge(e,d)
+    assert graph.graph_depth_first(a)==['a', 'b', 'c', 'g', 'd', 'e', 'h', 'f']
 
 @pytest.fixture
 def graph():

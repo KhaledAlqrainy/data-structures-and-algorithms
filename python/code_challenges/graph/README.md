@@ -1,23 +1,20 @@
-# Graph business trip
+# Graph Depth First
 
-* Write a function called business trip
-Arguments: graph, array of city names
-
-Return: cost or null.
+* A function called depth first takes list and node to display the collection.
 
 ## Challenge:
 
-* Determine whether the trip is possible with direct flights, and how much it would cost.
+* Return collection of nodes in their pre-order depth-first traversal order.
 
 ## Approach & Efficiency:
 
 Big O:
 
 time -> O(n)
-space -> O(n)
+space -> O(1)
 
 ## Solution:
 
-![Image](./bussiness_trip.PNG)
+![Image](./depth_first.PNG)
 
 
