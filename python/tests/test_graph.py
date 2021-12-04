@@ -1,6 +1,6 @@
 import pytest
 
-from code_challenges.graph.graph import *
+from Data_Structure.graph_breadth_first.graph_breadth_first import *
 
 
 def test_add_node():
@@ -46,7 +46,7 @@ def test_get_neighbors(graph):
         actual += [[edge.vertex.value,edge.weight]]
     assert actual == expected
 
-def test_get_neighbors_with_wieght(graph_weight):
+def test_get_neighbors_with_weight(graph_weight):
     expected = ['c', ['a', 1], ['b', 5], ['e', 9]]
     nodes = graph_weight.get_nodes()
     for node in nodes:
@@ -87,6 +87,39 @@ def test_get_neighbors2():
     assert neighbor_edge.vertex.value == 'Forza'
 
     assert neighbor_edge.weight == 44
+
+############# breadth first ############
+
+
+def test_breadth_first():
+    graph = Graph()
+    a = graph.add_node('a')
+    b = graph.add_node('b')
+    c = graph.add_node('c')
+    d = graph.add_node('d')
+    e = graph.add_node('e')
+    f = graph.add_node('f')
+    graph.add_edge(a, c)
+    graph.add_edge(a, d)
+    graph.add_edge(b, c)
+    graph.add_edge(b, f)
+    graph.add_edge(c, a)
+    graph.add_edge(c, b)
+    graph.add_edge(c, e)
+    graph.add_edge(d, a)
+    graph.add_edge(d, e)
+    graph.add_edge(e, c)
+    graph.add_edge(e, d)
+    graph.add_edge(e, f)
+    graph.add_edge(f, b)
+    graph.add_edge(f, e)
+    data=graph.breadth_first(a)
+    assert len(data) == 6
+    assert data[0] == 'a'
+    assert data[1] == 'c'
+    assert data[2] == 'd'
+    assert data[3] == 'b'
+    assert data[4] == 'e'
 
 @pytest.fixture
 def graph():
